@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBob Music Gallery</title>
+    <style>
+        body {
+            background-color: #f2f701;
+            font-family: 'Comic Sans MS',sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            padding: 20px;
+            background-color: #87cefa;
+            margin: 0;
+            border-bottom: 4px solid #ffd700;
+            font-size: 2em;
+        }
+
+        .music-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .music-item {
+            background-color: #cc02a0;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px; /* Limit the width to ensure items are not too wide */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            margin: 0 auto; /* Center align items in their container */
+        }
+
+        .music-item:hover {
+            transform: scale(1.05);
+        }
+
+        .music-item h3 {
+            color: #ffeb3b;
+            margin-bottom: 10px;
+            font-size: 1.2em; /* Adjust font size for better readability on small screens */
+        }
+
+        .music-item audio {
+            width: 100%;
+            outline: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #87cefa;
+            border-top: 4px solid #ffd700;
+            color: #333;
+            font-size: 1em; /* Adjust font size for better readability */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SpongeBob Music Gallery</h1>
+
+    <div class="music-gallery">
+        <div class="music-item">
+            <h3>Placeholder</h3>
+            <audio controls>
+                <source src="Placeholder" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <h3>Placeholder</h3>
+            <audio controls>
+                <source src="Placeholder" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <h3>Placeholder</h3>
+            <audio controls>
+                <source src="Placeholder" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+    <footer>
+        <p>Enjoy the best of SpongeBob SquarePants music!</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A place for Freakybob.">
+    <link rel="icon" type="image/x-icon" href="favicon (1).ico">
+    <style>
+        body {
+            background-image: url('spongbob.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(218, 203, 3);
+            font-size: 37px;
+            margin-top: -380px;
+        }
+
+        button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(172, 147, 5);
+            border: none;
+            border-radius: 5px;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 90%;
+        }
+
+        #mute-button {
+            position: fixed;
+            top: 10px; /* Distance from the top */
+            right: 10px; /* Distance from the right */
+            padding: 10px 15px;
+            background-color: rgba(255, 215, 0, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Freakybob</h1>
+    <a href="foundingpeople"><button>View the people who made Freakybob.site possible!</button></a>
+
+    <div id="sound-popup" class="popup">
+        <div class="popup-content">
+            <p>Can we have permission for sound? If not, you won't hear Freakybob :( </p>
+            <button id="yes-button">Yes</button>
+            <button id="no-button">No</button>
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="bestdayever.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Mute/Unmute Button -->
+    <button id="mute-button">Mute Music</button>
+<a href="Musicgallery"><button>Listen to Spongebob music!</button>
+    <script>
+        const popup = document.getElementById('sound-popup');
+        const yesButton = document.getElementById('yes-button');
+        const noButton = document.getElementById('no-button');
+        const backgroundMusic = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
+
+        function playMusic() {
+            backgroundMusic.play();
+        }
+
+        yesButton.addEventListener('click', () => {
+            playMusic();
+            popup.style.display = 'none'; 
+        });
+
+        noButton.addEventListener('click', () => {
+            popup.style.display = 'none'; 
+        });
+
+        muteButton.addEventListener('click', () => {
+            if (backgroundMusic.muted) {
+                backgroundMusic.muted = false;
+                muteButton.textContent = 'Mute Music';
+            } else {
+                backgroundMusic.muted = true;
+                muteButton.textContent = 'Unmute Music';
+            }
+        });
+
+        window.onload = () => {
+            popup.style.display = 'flex';
+        };
+    </script>
+
+</body>
+</html>
+
+
+
+

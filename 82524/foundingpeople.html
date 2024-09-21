@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others</title>
+    <style>
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .button {
+            background: none;
+            border: none;
+            color: #555;
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .button-container {
+            text-align: right;
+            margin-right: 400px;
+        }
+        .button-container button {
+            background: none;
+            border: none;
+            color: #555;
+            margin: 0 230px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #555;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .button-container button:hover {
+            color: #ffffff;
+            background-color: rgb(191, 26, 224);
+        }
+        .contributors {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contributors button {
+            background-color: #9fd4f8;
+            border: none;
+            color: #070004;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        .contributors button:hover {
+            color: #fdfdf9;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #1446fb;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The main people who helped make freakybob.site a real thing!</h1>
+    <audio
+        src="audio/66a Stadium Rave.mp3"
+        loop
+        autoplay>
+    </audio>
+    <div class="button-container">
+        <a href="index">
+            <button>Go back to Main Website :3</button>
+        </a>
+    </div>
+    <div class="button-container">
+        <a href="people">
+            <button>Check out some other people!</button>
+        </a>
+    </div>
+
+    <div class="contributors">
+        <button onclick="showInfo('Squirrel')">Squirrel</button>
+        <button onclick="showInfo('Wish')">Wish</button>
+        <button onclick="showInfo('Hater')">#2 Twitter Hater</button>
+    </div>
+    <div id="description" class="description"></div>
+
+    <div class="image-container" id="person-image" style="display: none;">
+        <img id="image" alt="Person Image">
+    </div>
+
+    <script>
+        function showInfo(name) {
+            const descriptions = {
+                'Squirrel': 'Squirrel bought the domain and coded the most of the website!',
+                'Wish': 'Wish did some coding to help the website and created the new Music Gallery!',
+                'Hater': '#2 Twitter Hater helped with giving all sorts of spongebob images!',
+            };
+
+            const images = {
+                'Squirrel': 'images/squirrel.webp',
+                'Wish': 'images/wish.png',
+                'Hater': 'images/twitterhater.webp',
+            };
+
+            const descriptionDiv = document.getElementById('description');
+            const personImage = document.getElementById('person-image');
+            const image = document.getElementById('image');
+
+            descriptionDiv.innerText = descriptions[name] || 'Information not available.';
+            image.src = images[name] || '';
+            personImage.style.display = (name in images) ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

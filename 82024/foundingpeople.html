@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freakybob.site Contributors</title>
+    <style>
+        body {
+            background-color: #FAFAD2; 
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .contributors {
+            display: flex;
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-top: 30px; 
+        }
+        .contributors button {
+            background: none;
+            border: none;
+            color: #555;
+            margin: 0 15px;
+            font-size: 40px; 
+            cursor: pointer;
+            padding: 0;
+        }
+        .contributors button:hover {
+            color: #879602;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px; 
+            height: auto;
+            border-radius: 50%; 
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>These are all the people who helped make Freakybob.site a real thing!</h1>
+    <audio 
+        src="https://www.televisiontunes.com/uploads/audio/Spongebob%20Squarepants%20-%20Best%20Day%20Ever.mp3" 
+        loop 
+        autoplay 
+        muted>
+    </audio>
+    <a href="People">
+        <button>Others (Page will be worked on soon™️)</button>
+      </a>
+    <a href="index">
+        <button>Go back</button>
+    </a>
+    <div class="contributors">
+        <button onclick="toggleDescription('Squirrel')">Squirrel</button>
+        <button onclick="toggleDescription('Wish')">Wish</button>
+        <button onclick="toggleDescription('#2 Twitter Hater')">#2 Twitter Hater</button>
+    </div>
+    <div id="description" class="description"></div>
+
+    <div class="image-container" id="squirrel-image" style="display: none;">
+        <img src="squirrel.webp" alt="Squirrel Image">
+    </div>
+
+    <div class="image-container" id="wish-image" style="display: none;">
+        <img src="wish.png" alt="Wish Image">
+    </div>
+    <div class="image-container" id="twitter-image" style="display: none;">
+        <img src="twitterhater.webp" alt="Twitter image">
+    </div>
+    <script>
+        let currentDescription = null;
+
+        function toggleDescription(name) {
+            const descriptions = {
+                'Squirrel': 'Squirrel bought the domain and set up the website!',
+                'Wish': 'Wish was the main cause of all of this!',
+                '#2 Twitter Hater': '#2 Twitter Hater is giving this website pictures of our beloved Freakybob!',
+                
+            };
+
+            const descriptionDiv = document.getElementById('description');
+            const squirrelImage = document.getElementById('squirrel-image');
+            const wishImage = document.getElementById('wish-image');
+            const twitterImage = document.getElementById('twitter-image');
+        
+            if (currentDescription === name) {
+                descriptionDiv.innerText = ''; 
+                currentDescription = null;
+                squirrelImage.style.display = 'none'; 
+                wishImage.style.display = 'none'; 
+                twitterImage.style.display = 'none'; 
+            } else {
+                descriptionDiv.innerText = descriptions[name] || 'Description not available.';
+                currentDescription = name;
+                squirrelImage.style.display = (name === 'Squirrel') ? 'block' : 'none';
+                wishImage.style.display = (name === 'Wish') ? 'block' : 'none'; 
+                twitterImage.style.display = (name === '#2 Twitter Hater') ? 'block' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>
