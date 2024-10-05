@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Info page :3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A place for Freakybob.">
+    <meta content="Freakybob" property="og:title" />
+    <meta content="Together, we are freaky." property="og:description" />
+    <meta content="https://freakybob.site/info" property="og:url" />
+    <meta content="https://github.com/5quirre1/Freakybob.site/blob/main/Snapshots/Screenshot%202024-08-29%2012.38.20%20AM.png" property="og:image" />
+    <meta content="#006b79" data-react-helmet="true" name="theme-color" />
+    <link rel="icon" type="image/png" href="images/Freaky_Bob_info.png">
+    <style>
+        body {
+            background-color: rgb(5, 105, 105);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(217, 224, 16);
+        }
+        p {
+            text-align: center;
+            color: rgb(206, 190, 190);
+        }
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #dbde06;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background: none;
+            border: none;
+            color: #e7d915;
+            margin: 0 15px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #c107b5;
+            transition: color 0.7s, background-color 0.7s;
+        }
+        .button-container button:hover {
+            color: #0f000f;
+            background-color: #f3ef14;
+            transform: scale(1.1);
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 40px;
+        }
+        #freakybob-orgin, #freakybob-found {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        #freakybob-orgin:hover, #freakybob-found:hover {
+            transition: 0.8s;
+            transform: scale(1.1);
+        }
+        #freakybob-found {
+            width: 320px;
+        }
+        .carousel-button {
+            background-color: #c107b5;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .carousel-button:hover {
+            background-color: #f3ef14;
+            color: #0f000f;
+        }
+        #carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #carousel {
+            display: flex;
+            overflow: hidden;
+            width: 400px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            width: 400px;
+            height: auto;
+            cursor: pointer;
+        }
+        #para1, #para2 {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bede09;
+        }
+        
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--Wish is gay-->
+    <audio autoplay loop><source src="audio/39 - Wii U Chat - Lobby (TV).mp3" type="audio/mp3"></audio>
+    <p>This page looks better on a laptop or a desktop. Mobile is still in Development :3</p>
+    <strong><h1>Welcome to Freakybob.site</h1></strong>
+    <div class="button-container">
+        <a href="https://freakybob.site">
+            <button>Go back to Main Website :3</button>
+        </a>
+    </div>
+    <strong><p>Since You're here, You probably want to know what this is about :3</p></strong>
+    <h2>freakybob.site is a website that was created by <a href="https://github.com/5quirre1" id="squirre1">5quirre1</a> and <a href="https://github.com/wish13yt" id="wish">wish13yt</a>. This all started from Wish mentioning a "freakybob" domain. Everyone was looking at domains until Squirrel found a domain on a domain website. The domain was "freakybob.site" for $4.00. Squirrel bought it almost instantly starting the well deserved birth of freakybob.site!</h2>
+
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="images/freakyboborigin.png" id="freakybob-orgin" alt="freakybob origin">
+            <strong><p id="para1">A screenshot of Wish saying "steam gift 50$-freakybob.com" which inspired Squirrel to buy and create freakybob.site</p></strong>
+            <img src="images/Foundfreakybob.site.png" id="freakybob-found" alt="Found freakybob site">
+            <strong><p id="para2">A screenshot of Squirrel finding the domain "freakybob.site"</p></strong>
+        </div>
+
+        <div id="carousel-container">
+            <button class="carousel-button" onclick="prevImage()">&#10094;</button>
+            <div id="carousel">
+                <div class="carousel-images" id="image-track">
+                    <img src="Snapshots/oldfreakybob.png" alt="Image 1">
+                    <img src="Snapshots/Aug 20.png" alt="Image 2">
+                    <img src="Snapshots/Aug 22.png" alt="Image 3">
+                    <img src="Snapshots/Aug 23.png" alt="Image 4">
+                </div>
+            </div>
+            <button class="carousel-button" onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+<!--I FEEL SO FREAKY JUST LIKE FREAKYBOB!!!-->
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged image">
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#image-track img');
+        const totalImages = images.length;
+        const modal = document.getElementById("image-modal");
+        const modalImage = document.getElementById("modal-image");
+
+        function updateCarousel() {
+            const imageTrack = document.getElementById('image-track');
+            const width = images[0].clientWidth;
+            imageTrack.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        }
+
+        function openModal(src) {
+            modalImage.src = src;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        
+        images.forEach(image => {
+            image.addEventListener('click', () => openModal(image.src));
+        });
+
+       
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        
+        window.addEventListener('keydown', (event) => {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('resize', updateCarousel);
+    </script>
+</body>
+</html>
+
+
