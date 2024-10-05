@@ -1,13 +1,13 @@
 # Pushes the contents of the repo to the Codeberg mirror
-name: Mirror to Gitea
+name: Mirror to Disroot
 on: push
 jobs:
-  gitea:
+  disroot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with: { fetch-depth: 0 }
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url: git@gitea.com:Freakybob/classic.freakybob.site.git
+          target_repo_url: git@git.disroot.org:Freakybob/classic.freakybob.site
           ssh_private_key: ${{ secrets.CODEBERG_SSH }}
