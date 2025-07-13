@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others</title>
+    <style>
+        body {
+            background-color: #f92cfd; 
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background: none;
+            border: none;
+            color: #555;
+            margin: 0 15px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #555;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .button-container button:hover {
+            color: #6f0279;
+            background-color: #f3ef14;
+        }
+        .contributors {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contributors button {
+            background-color: #d6c20b;
+            border: none;
+            color: #6d5a05;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        .contributors button:hover {
+            color: #f106f1;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The main people who helped make freakybob.site a real thing!</h1>
+    <div class="button-container">
+        <a href="index.html">
+            <button>Go back to Main Website :3</button>
+        </a>
+    </div>
+
+    <div class="contributors">
+        <button onclick="showInfo('Squirrel')">Squirrel</button>
+        <button onclick="showInfo('Wish')">Wish</button>
+        <button onclick="showInfo('Hater')">#2nd Twitter Hater</button>
+    </div>
+    <div id="description" class="description"></div>
+
+    <div class="image-container" id="person-image" style="display: none;">
+        <img id="image" alt="Person Image">
+    </div>
+
+    <script>
+        function showInfo(name) {
+            const descriptions = {
+                'Squirrel': 'Bought the Domain and did the most of the Website!',
+                'Wish': 'Wish did some coding to help the website!',
+                'Hater': '#2nd Twitter Hater helped with giving all sorts of spongebob images!',
+            };
+
+            const images = {
+                'Squirrel': 'squirrel.webp',
+                'Wish': 'wish.png',
+                'Hater': 'twitterhater.webp',
+            };
+
+            const descriptionDiv = document.getElementById('description');
+            const personImage = document.getElementById('person-image');
+            const image = document.getElementById('image');
+
+            descriptionDiv.innerText = descriptions[name] || 'Information not available.';
+            image.src = images[name] || '';
+            personImage.style.display = (name in images) ? 'block' : 'none';
+        }
+    </script>
