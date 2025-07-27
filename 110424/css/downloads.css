@@ -1,0 +1,72 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: rgb(1, 83, 121);
+}
+    a {
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(172, 147, 5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    max-width: 220px;
+    width: 30%;
+    margin-left: 46%;
+    margin-right: 46%;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 10px 10px 10px rgba(248, 232, 3, 0.3);
+}
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-shadow: 10px 10px 10px rgba(248, 232, 3, 0.3);
+}
+#para1 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-shadow: 10px 10px 10px rgba(248, 232, 3, 0.3);
+}
+
+#para2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-shadow: 10px 10px 10px rgba(248, 232, 3, 0.3);
+}
+
+@media (max-width: 770px) {
+    a {
+        margin-left: 31%;
+        margin-right: 31%;
+    }
+
+    h1 {
+        font-size: 45px;
+        margin-left: 0%;
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-left: 1%;
+    }
+
+    #para1 {
+        font-size: 20px;
+        margin-left: 0%;
+    }
+
+    #para2 {
+        font-size: 20px;
+        margin-left: 0%;
+    }
+  }
